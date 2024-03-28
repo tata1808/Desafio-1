@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendências</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            text-align: center;
+        }
+        select, button {
+            margin-top: 20px;
+        }
+        .weekdays {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .task-input {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .task-input input[type="text"] {
+            flex: 1;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pendências</h1>
+        <select name="months">
+            <option value="">Selecione um mês</option>
+            <option value="jan">Janeiro</option>
+            <option value="feb">Fevereiro</option>
+            <option value="mar">Março</option>
+            <option value="apr">Abril</option>
+            <option value="may">Maio</option>
+            <option value="jun">Junho</option>
+            <option value="jul">Julho</option>
+            <option value="aug">Agosto</option>
+            <option value="sep">Setembro</option>
+            <option value="oct">Outubro</option>
+            <option value="nov">Novembro</option>
+            <option value="dec">Dezembro</option>
+        </select>
+        <div class="weekdays">
+            <div>Segunda-feira</div>
+            <div>Terça-feira</div>
+            <div>Quarta-feira</div>
+            <div>Quinta-feira</div>
+            <div>Sexta-feira</div>
+            <div>Sábado</div>
+            <div>Domingo</div>
+        </div>
+        <div class="task-input">
+            <input type="text" placeholder="Digite uma tarefa">
+            <button>Adicionar Tarefa</button>
+        </div>
+        <ul class="task-list" id="taskList"></ul>
+    </div>
+
+    <script>
+        document.getElementById('addTaskBtn').addEventListener('click', function() {
+            var taskInput = document.getElementById('taskInput').value;
+            if (taskInput.trim() !== '') {
+                var taskList = document.getElementById('taskList');
+                var newTask = document.createElement('li');
+                newTask.textContent = taskInput;
+                newTask.classList.add('new-task');
+                taskList.appendChild(newTask);
+                document.getElementById('taskInput').value = '';
+            }
+        });
+    </script>
+</body>
+</html> 
+
+           
+      
