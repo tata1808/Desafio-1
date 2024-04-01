@@ -1,0 +1,29 @@
+/* Estilo para texto */
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Estilo para título */
+h1 {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+/* Estilo para link */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Estilo para link quando hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para texto negrito */
+.bold-text {
+    font-weight: bold;
+}
