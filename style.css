@@ -1,29 +1,73 @@
-/* Estilo para texto */
-p {
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* cor de fundo do corpo */
 }
-
-/* Estilo para título */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff; /* cor de fundo do contêiner */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+    margin-top: 50px; /* margem superior */
+}
 h1 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 20px;
+    margin-top: 0; /* remover margem superior */
+    text-align: center;
+    color: #333; /* cor do texto */
 }
-
-/* Estilo para link */
-a {
-    color: #007bff;
-    text-decoration: none;
+select, button {
+    margin-top: 20px;
+    padding: 10px; /* adicionar preenchimento */
+    font-size: 16px; /* tamanho da fonte */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 4px; /* arredondamento de borda */
 }
-
-/* Estilo para link quando hover */
-a:hover {
-    text-decoration: underline;
+.weekdays {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold; /* negrito */
 }
-
-/* Estilo para texto negrito */
-.bold-text {
-    font-weight: bold;
+.task-input {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.task-input input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px; /* adicionar preenchimento */
+    font-size: 16px; /* tamanho da fonte */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 4px; /* arredondamento de borda */
+}
+.task-input button {
+    padding: 10px 20px; /* preenchimento superior e inferior, preenchimento esquerdo e direito */
+    font-size: 16px; /* tamanho da fonte */
+    background-color: #007bff; /* cor de fundo */
+    color: #fff; /* cor do texto */
+    border: none; /* remover borda */
+    border-radius: 4px; /* arredondamento de borda */
+    cursor: pointer; /* cursor */
+    transition: background-color 0.3s ease; /* transição suave de cor de fundo */
+}
+.task-input button:hover {
+    background-color: #0056b3; /* cor de fundo ao passar o mouse */
+}
+.task-list {
+    list-style-type: none; /* remover marcadores de lista */
+    padding: 0; /* remover preenchimento */
+    margin-top: 20px;
+    text-align: left; /* alinhamento do texto à esquerda */
+}
+.task-list li {
+    background-color: #f9f9f9; /* cor de fundo do item da lista */
+    padding: 10px; /* adicionar preenchimento */
+    margin-bottom: 10px; /* margem inferior */
+    border-radius: 4px; /* arredondamento de borda */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra */
 }
